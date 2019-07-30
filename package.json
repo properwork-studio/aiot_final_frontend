@@ -1,0 +1,22 @@
+{
+  "name": "aiot_final_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/properwork-studio/aiot_final_frontend.git"
+  },
+  "author": "laurenc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/properwork-studio/aiot_final_frontend/issues"
+  },
+  "homepage": "https://github.com/properwork-studio/aiot_final_frontend#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
