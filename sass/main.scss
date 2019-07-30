@@ -56,3 +56,23 @@ a {
     width: 220px;
   }
 }
+
+.submitBtn {
+  width: auto;
+  padding: 8px 35px;
+  border-radius: 100px;
+  align-self: center;
+  border: 1px solid #333;
+  color: #333;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all .4s;
+
+  &:hover {
+    padding: 8px 45px;
+    text-decoration: none;
+    background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
+    border-color: transparent;
+    color: #fff;
+  }
+}
