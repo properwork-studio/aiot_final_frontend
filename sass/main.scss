@@ -3,6 +3,8 @@ $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
+$color-red: #dc3545;
+
 *,p,a {
   font-size: 14px;
 }
@@ -81,7 +83,7 @@ ul {
   padding: 8px 35px;
   border-radius: 100px;
   align-self: center;
-  border: 1px solid #333;
+  border: 1px solid currentColor;
   color: #333;
   box-sizing: border-box;
   text-align: center;
@@ -109,6 +111,44 @@ ul {
       color: #333;
       border-bottom: 1px solid #333;
     }
+  }
+}
+
+.logoutBtn {
+  padding: 5px 15px;
+
+  &:hover {
+    padding: 5px 20px;
+  }
+}
+
+.editBtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 5px 15px;
+  color: #999;
+
+  &:hover {
+    padding: 5px 20px;
+  }
+}
+
+.paginationBtn {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  line-height: 23px;
+  border: 1px solid #666;
+  color: #666;
+  border-radius: 50%;
+  text-align: center;
+  transition: all .3s;
+
+  &:hover {
+    background-color: #666;
+    color: #fff;
+    text-decoration: none;
   }
 }
 
@@ -184,6 +224,68 @@ ul {
       &:hover {
         color: #dc3545;
       }
+    }
+  }
+}
+
+header {
+  background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
+  padding: 20px 0;
+}
+
+.logout__bar {
+  border: 1px solid #fff;
+  padding: 0 20px;
+  border-radius: 100px;
+  background-color: #fff;
+}
+
+.dashboard {
+
+  &__card {
+    box-shadow: 0 2px 6px rgba(0,0,0, .1);
+    height: 100%;
+  }
+}
+
+.member__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #28b485;
+  align-self: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.record {
+
+  &__list-item {
+    padding: 15px 0;
+    
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  &__list-icon {
+    width: 25px;
+    height: 25px;
+    line-height: 23px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+
+    &--green {
+      color: $color-primary;
+    }
+
+    &--red {
+      color: $color-red;
     }
   }
 }
