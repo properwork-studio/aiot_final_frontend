@@ -1,3 +1,15 @@
+*, p, a {
+  font-size: 14px; }
+
+a {
+  color: #333; }
+
+ul {
+  list-style: none; }
+
+.datepicker {
+  padding: 10px; }
+
 .custom-heading {
   color: #333; }
 
@@ -12,18 +24,20 @@
   min-height: 100vh;
   background-image: linear-gradient(to left, #7ed56f, #28b485); }
 
+.page-medicine {
+  max-height: 100vh;
+  overflow-y: hidden; }
+
 .login-box {
   width: 40%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: all .3s; }
   .login-box:hover {
     transform: translate(-50%, -51%); }
-
-a {
-  color: #333; }
 
 .button,
 .button:link {
@@ -60,3 +74,65 @@ a {
     background-image: linear-gradient(to left, #7ed56f, #28b485);
     border-color: transparent;
     color: #fff; }
+  .submitBtn--sub {
+    border: #ccc;
+    color: #999;
+    background-color: transparent;
+    padding: 3px 0px;
+    border-radius: 0;
+    position: relative; }
+    .submitBtn--sub:hover {
+      padding: 3px 0px;
+      background-image: none;
+      color: #333;
+      border-bottom: 1px solid #333; }
+
+.init__step .current {
+  color: #55c57a;
+  border-color: #55c57a; }
+
+.init__cell {
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+  color: #ccc;
+  border-radius: 50px;
+  position: relative; }
+  .init__cell:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 3px);
+    display: block;
+    width: 10px;
+    height: 1px;
+    background-color: #ccc; }
+
+.init__medicine {
+  width: 50%;
+  max-height: calc(100vh - 50px);
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+.medicine__list {
+  margin-top: 30px;
+  border-top: 1px solid #aaa; }
+  .medicine__list-item {
+    padding: 10px 0; }
+    .medicine__list-item:not(:last-child) {
+      border-bottom: 1px solid #ccc; }
+  .medicine__list-icon {
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid currentColor;
+    width: 30px;
+    height: 30px;
+    line-height: 27px;
+    border-radius: 50%;
+    text-align: center;
+    color: #55c57a; }
+    .medicine__list-icon:hover {
+      color: #28b485; }
+    .medicine__list-icon--delete {
+      color: orangered; }
+      .medicine__list-icon--delete:hover {
+        color: #dc3545; }
