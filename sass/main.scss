@@ -23,6 +23,14 @@ ul {
 
 .custom-heading {
   color: #333;
+
+  &--green {
+    background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
 }
 
 .custom-text {
@@ -80,7 +88,7 @@ ul {
 
 .submitBtn {
   width: auto;
-  padding: 8px 35px;
+  padding: 8px 30px;
   border-radius: 100px;
   align-self: center;
   border: 1px solid currentColor;
@@ -90,7 +98,7 @@ ul {
   transition: all .4s;
 
   &:hover {
-    padding: 8px 45px;
+    padding: 8px 40px;
     text-decoration: none;
     background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
     border-color: transparent;
@@ -114,6 +122,39 @@ ul {
   }
 }
 
+.cancelBtn {
+  color: #666;
+  padding: 8px 25px;
+
+  &:hover {
+    background-image: none;
+    background-color: #666;
+    padding: 8px 30px;
+  }
+}
+
+.closingBtn {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border: 1px solid currentColor;
+  color: #333;
+  border-radius: 50%;
+  line-height: 27px;
+  text-align: center;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: #666;
+    border-color: #666;
+    text-decoration: none;
+  }
+}
+
 .logoutBtn {
   padding: 5px 15px;
 
@@ -134,15 +175,15 @@ ul {
   }
 }
 
-.paginationBtn {
-  width: 25px;
-  height: 25px;
+.detailBtn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 5px 15px;
   display: inline-block;
-  line-height: 23px;
   border: 1px solid #666;
   color: #666;
-  border-radius: 50%;
-  text-align: center;
+  border-radius: 100px;
   transition: all .3s;
 
   &:hover {
@@ -191,6 +232,17 @@ ul {
   }
 }
 
+.card__medicine {
+  padding: 20px 0;
+  max-height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.card-body__medicine {
+  overflow-y: scroll;
+  padding: 0 35px;
+}
+
 .medicine__list {
   margin-top: 30px;
   border-top: 1px solid #aaa;
@@ -231,6 +283,15 @@ ul {
 header {
   background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
   padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.main {
+  margin-top: 130px;
 }
 
 .logout__bar {
@@ -241,10 +302,21 @@ header {
 }
 
 .dashboard {
+  background-color: #fdfdfd;
+  margin-bottom: 30px;
 
   &__card {
     box-shadow: 0 2px 6px rgba(0,0,0, .1);
     height: 100%;
+  }
+
+  &__fall {
+    height: calc(30% - 15px);
+    margin-bottom: 30px;
+  }
+
+  &__door {
+    height: calc(70% - 15px);
   }
 }
 
@@ -287,5 +359,56 @@ header {
     &--red {
       color: $color-red;
     }
+  }
+}
+
+.overlay {
+
+  &__background {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all .3s;
+  }
+
+  &__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    width: 70%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    transition: all .3s;
+  }
+
+  &__contact {
+    display: none;
+    width: 50%;
+    max-width: 800px;
+  }
+
+  &__medicine {
+    display: none;
+    max-height: calc(100vh - 60px);
+    overflow-y: scroll;
+  }
+
+  &__medicine-record {
+    display: none;
+    max-height: calc(100vh - 60px);
+    overflow-y: scroll;
+  }
+
+  &__door {
+    display: none;
+    width: 50%;
+    max-width: 800px;
   }
 }
