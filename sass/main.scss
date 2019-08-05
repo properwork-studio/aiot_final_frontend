@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 // COLOR
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
 $color-red: #dc3545;
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
 
 *,p,a {
   font-size: 14px;
