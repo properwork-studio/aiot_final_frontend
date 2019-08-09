@@ -261,6 +261,7 @@
         <h3 class="h4 text-center py-3 custom-heading">用藥設定</h3>
         <hr class="py-3">
         <form name="medicineForm" action="#" class="px-4 d-flex flex-column">
+          <input type="hidden" name="record_id" id="recordId" value="">
           <div class="form-group row">
             <label for="memberName" class="col-md-3 col-sm-4 col-form-label">家庭成員：</label>
             <div class="col-md-9 col-sm-8">
@@ -345,18 +346,21 @@
           </div>
           <div class="action-bar align-self-end mt-3">
             <input type="reset" value="取消" class="submitBtn cancelBtn mr-1">
-            <input type="submit" value="新增設定" class="submitBtn">
+            <input type="submit" value="新增設定" class="submitBtn addNewBtn">
           </div>
         </form>
         
         <div class="medicine__list">
-          <ul class="px-2">
+          <ul class="px-2" id="medicineList">
             <li class="medicine__list-item row">
+              <input type="hidden" name="record_id" id="record_3" value="3">
               <div class="col-sm-3">
                 <p class="mb-0">Grandma</p>
               </div>
               <div class="col-sm-2">
                 <p class="mb-0">08:30</p>
+                <input type="hidden" id="alertHour_3" value="08">
+                <input type="hidden" id="alertMinute_3" value="30">
               </div>
               <div class="col-sm-5">
                 <p class="mb-0">藥盒1 - B-complex</p>
@@ -364,9 +368,51 @@
                 <p class="mb-0">藥盒4 - 降血壓</p>
               </div>
               <div class="col-sm-2 text-right">
-                <a href="#" class="medicine__list-icon medicine__list-icon--delete mr-1"><i class="fa fa-trash-o"
+                <a class="medicine__list-icon medicine__list-icon--delete mr-1"><i class="fa fa-trash-o delMed"
                     aria-hidden="true"></i></a>
-                <a href="#" class="medicine__list-icon mr-1"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a class="medicine__list-icon mr-1"><i class="fa fa-pencil editMed" aria-hidden="true"></i></a>
+              </div>
+            </li>
+            <li class="medicine__list-item row">
+              <input type="hidden" name="record_id" id="record_2" value="2">
+              <div class="col-sm-3">
+                <p class="mb-0">Grandma</p>
+              </div>
+              <div class="col-sm-2">
+                <p class="mb-0">08:30</p>
+                <input type="hidden" id="alertHour_2" value="08">
+                <input type="hidden" id="alertMinute_2" value="30">
+              </div>
+              <div class="col-sm-5">
+                <p class="mb-0">藥盒1 - B-complex</p>
+                <p class="mb-0">藥盒2 - 維骨力</p>
+                <p class="mb-0">藥盒4 - 降血壓</p>
+              </div>
+              <div class="col-sm-2 text-right">
+                <a href="#" class="medicine__list-icon medicine__list-icon--delete mr-1"><i class="fa fa-trash-o delMed"
+                    aria-hidden="true"></i></a>
+                <a href="#" class="medicine__list-icon mr-1"><i class="fa fa-pencil editMed" aria-hidden="true"></i></a>
+              </div>
+            </li>
+            <li class="medicine__list-item row">
+              <input type="hidden" name="record_id" id="record_1" value="1">
+              <div class="col-sm-3">
+                <p class="mb-0">Grandma</p>
+              </div>
+              <div class="col-sm-2">
+                <p class="mb-0">08:30</p>
+                <input type="hidden" id="alertHour_1" value="08">
+                <input type="hidden" id="alertMinute_1" value="30">
+              </div>
+              <div class="col-sm-5">
+                <p class="mb-0">藥盒1 - B-complex</p>
+                <p class="mb-0">藥盒2 - 維骨力</p>
+                <p class="mb-0">藥盒4 - 降血壓</p>
+              </div>
+              <div class="col-sm-2 text-right">
+                <a href="#" class="medicine__list-icon medicine__list-icon--delete mr-1"><i class="fa fa-trash-o delMed"
+                    aria-hidden="true"></i></a>
+                <a href="#" class="medicine__list-icon mr-1"><i class="fa fa-pencil editMed" aria-hidden="true"></i></a>
               </div>
             </li>
             <li class="medicine__list-item row">
@@ -382,45 +428,9 @@
                 <p class="mb-0">藥盒4 - 降血壓</p>
               </div>
               <div class="col-sm-2 text-right">
-                <a href="#" class="medicine__list-icon medicine__list-icon--delete mr-1"><i class="fa fa-trash-o"
+                <a href="#" class="medicine__list-icon medicine__list-icon--delete mr-1"><i class="fa fa-trash-o delMed"
                     aria-hidden="true"></i></a>
-                <a href="#" class="medicine__list-icon mr-1"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-              </div>
-            </li>
-            <li class="medicine__list-item row">
-              <div class="col-sm-3">
-                <p class="mb-0">Grandma</p>
-              </div>
-              <div class="col-sm-2">
-                <p class="mb-0">08:30</p>
-              </div>
-              <div class="col-sm-5">
-                <p class="mb-0">藥盒1 - B-complex</p>
-                <p class="mb-0">藥盒2 - 維骨力</p>
-                <p class="mb-0">藥盒4 - 降血壓</p>
-              </div>
-              <div class="col-sm-2 text-right">
-                <a href="#" class="medicine__list-icon medicine__list-icon--delete mr-1"><i class="fa fa-trash-o"
-                    aria-hidden="true"></i></a>
-                <a href="#" class="medicine__list-icon mr-1"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-              </div>
-            </li>
-            <li class="medicine__list-item row">
-              <div class="col-sm-3">
-                <p class="mb-0">Grandma</p>
-              </div>
-              <div class="col-sm-2">
-                <p class="mb-0">08:30</p>
-              </div>
-              <div class="col-sm-5">
-                <p class="mb-0">藥盒1 - B-complex</p>
-                <p class="mb-0">藥盒2 - 維骨力</p>
-                <p class="mb-0">藥盒4 - 降血壓</p>
-              </div>
-              <div class="col-sm-2 text-right">
-                <a href="#" class="medicine__list-icon medicine__list-icon--delete mr-1"><i class="fa fa-trash-o"
-                    aria-hidden="true"></i></a>
-                <a href="#" class="medicine__list-icon mr-1"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a href="#" class="medicine__list-icon mr-1"><i class="fa fa-pencil editMed" aria-hidden="true"></i></a>
               </div>
             </li>
           </ul>
@@ -689,87 +699,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const overlayBg = document.querySelector('.overlay__background');
-      const overlayContact = document.querySelector('.overlay__contact');
-      const overlayMedicine = document.querySelector('.overlay__medicine');
-      const overlayMedicineRecord = document.querySelector('.overlay__medicine-record');
-      const overlayDoor = document.querySelector('.overlay__door');
-      const cancelBtn = document.getElementById('cancelBtn');
-      const closingBtn = document.getElementById('closingBtn');
-      const editContactBtn = document.getElementById('editContactBtn');
-      const editMedicineBtn = document.getElementById('editMedicineBtn');
-      const medicineRecordBtn = document.getElementById('medicineRecordBtn');
-      const doorRecordBtn = document.getElementById('doorRecordBtn');
-      const alertHour = document.getElementById('alertHour');
-      const alertMinute = document.getElementById('alertMinute');
-
-      const openOverlay = () => {
-        overlayBg.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-      }
-
-      const closeOverlay = (e) => {
-        e.target.parentElement.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
-        overlayBg.style.display = 'none';
-      }
-
-      editContactBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openOverlay();
-        overlayContact.style.display = 'block';
-      });
-
-      editMedicineBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openOverlay();
-        overlayMedicine.style.display = 'block';
-      })
-
-      medicineRecordBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openOverlay();
-        overlayMedicineRecord.style.display = 'block';
-      })
-
-      doorRecordBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openOverlay();
-        overlayDoor.style.display = 'block';
-      })
-
-      document.addEventListener('click', (e) => {
-        if(e.target.classList.contains('cancelBtn')) {
-          e.preventDefault();
-          closeOverlay(e);
-        }
-        if(e.target.classList.contains('closingBtn')) {
-          e.preventDefault();
-          e.target.parentElement.parentElement.parentElement.style.display = 'none';
-          overlayBg.style.display = 'none';
-        }
-      })
-
-      // For medicine alert setting
-      for(let i = 1; i <= 24; i++) {
-        if (i < 10) {
-          alertHour.innerHTML += `<option value="0${i}">0${i}</option>`
-        } else {
-          alertHour.innerHTML += `<option value="${i}">${i}</option>`
-        }
-      }
-
-      for (let i = 0; i < 60; i++) {
-        if (i < 10) {
-          alertMinute.innerHTML += `<option value="0${i}">0${i}</option>`
-        } else {
-          alertMinute.innerHTML += `<option value="${i}">${i}</option>`
-        }
-      }
-    })
-    
-  </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
