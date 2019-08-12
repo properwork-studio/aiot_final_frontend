@@ -198,6 +198,26 @@ ul {
   }
 }
 
+.histBtn {
+  border: 1px solid #666;
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 100px;
+  margin-top: 20px;
+  align-self: flex-end;
+  color: #666;
+  font-size: 14px;
+  transition: all .3s;
+
+  &:hover {
+    background-color: #666;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
 .init {
 
   &__step {
@@ -322,6 +342,11 @@ header {
 
   &__door {
     height: calc(70% - 15px);
+  }
+
+  &__environment {
+    height: 100%;
+    margin-bottom: 10px;
   }
 }
 

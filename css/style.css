@@ -153,6 +153,23 @@ ul {
     color: #fff;
     text-decoration: none; }
 
+.histBtn {
+  border: 1px solid #666;
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 100px;
+  margin-top: 20px;
+  align-self: flex-end;
+  color: #666;
+  font-size: 14px;
+  transition: all .3s; }
+  .histBtn:hover {
+    background-color: #666;
+    color: #fff;
+    text-decoration: none; }
+
 .init__step .current {
   color: #55c57a;
   border-color: #55c57a; }
@@ -241,6 +258,9 @@ header {
     margin-bottom: 30px; }
   .dashboard__door {
     height: calc(70% - 15px); }
+  .dashboard__environment {
+    height: 100%;
+    margin-bottom: 10px; }
 
 .member__image {
   width: 100px;
