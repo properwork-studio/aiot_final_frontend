@@ -301,7 +301,7 @@ header {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -317,6 +317,10 @@ header {
   max-width: 1100px;
   box-sizing: border-box;
   transition: all .3s; }
+
+.overlay__bottom {
+  top: 65%;
+  transform: translate(-50%, -45%); }
 
 .overlay__contact {
   display: none;
@@ -337,3 +341,15 @@ header {
   display: none;
   width: 50%;
   max-width: 800px; }
+
+.overlay__temperature, .overlay__humidity, .overlay__co {
+  display: none;
+  width: 70%; }
+
+.chart__temperature .ct-series-a .ct-line,
+.chart__temperature .ct-series-a .ct-point {
+  stroke: #c62828; }
+
+.chart__humidity .ct-series-a .ct-line,
+.chart__humidity .ct-series-a .ct-point {
+  stroke: #2962ff; }

@@ -5,12 +5,18 @@ const overlayContact = document.querySelector('.overlay__contact');
 const overlayMedicine = document.querySelector('.overlay__medicine');
 const overlayMedicineRecord = document.querySelector('.overlay__medicine-record');
 const overlayDoor = document.querySelector('.overlay__door');
+const overlayTemp = document.querySelector('.overlay__temperature');
+const overlayHumid = document.querySelector('.overlay__humidity');
+const overlayCo = document.querySelector('.overlay__co');
 const cancelBtn = document.getElementById('cancelBtn');
 const closingBtn = document.getElementById('closingBtn');
 const editContactBtn = document.getElementById('editContactBtn');
 const editMedicineBtn = document.getElementById('editMedicineBtn');
 const medicineRecordBtn = document.getElementById('medicineRecordBtn');
 const doorRecordBtn = document.getElementById('doorRecordBtn');
+const tempHistory = document.getElementById('tempHistory');
+const humidHistory = document.getElementById('humidHistory');
+const coHistory = document.getElementById('coHistory');
 
 // For Selecting Form Fields
 const medicineList = document.getElementById('medicineList');
@@ -37,6 +43,7 @@ const openOverlay = () => {
 const closeOverlay = (e) => {
   e.target.parentElement.parentElement.parentElement.parentElement.parentElement.style.display = 'none';
   overlayBg.style.display = 'none';
+  document.body.style.overflow = 'scroll';
 }
 
 editContactBtn.addEventListener('click', (e) => {
@@ -65,6 +72,24 @@ doorRecordBtn.addEventListener('click', (e) => {
   overlayDoor.style.display = 'block';
 })
 
+tempHistory.addEventListener('click', (e) => {
+  e.preventDefault();
+  openOverlay();
+  overlayTemp.style.display = 'block';
+})
+
+humidHistory.addEventListener('click', (e) => {
+  e.preventDefault();
+  openOverlay();
+  overlayHumid.style.display = 'block';
+})
+
+// coHistory.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   openOverlay();
+//   overlayCo.style.display = 'block';
+// })
+
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('cancelBtn')) {
     e.preventDefault();
@@ -72,6 +97,7 @@ document.addEventListener('click', (e) => {
   }
   if (e.target.classList.contains('closingBtn')) {
     e.preventDefault();
+    document.body.style.overflow = 'scroll';
     e.target.parentElement.parentElement.parentElement.style.display = 'none';
     overlayBg.style.display = 'none';
   }

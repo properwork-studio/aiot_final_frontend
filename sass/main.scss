@@ -405,7 +405,7 @@ header {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,.85);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -422,6 +422,11 @@ header {
     max-width: 1100px;
     box-sizing: border-box;
     transition: all .3s;
+  }
+
+  &__bottom {
+    top: 65%;
+    transform: translate(-50%, -45%);
   }
 
   &__contact {
@@ -446,5 +451,29 @@ header {
     display: none;
     width: 50%;
     max-width: 800px;
+  }
+
+  &__temperature,
+  &__humidity,
+  &__co {
+    display: none;
+    width: 70%;
+  }
+}
+
+.chart {
+
+  &__temperature {
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+      stroke: #c62828;
+    }
+  }
+
+  &__humidity {
+    .ct-series-a .ct-line,
+    .ct-series-a .ct-point {
+      stroke: #2962ff;
+    }
   }
 }
